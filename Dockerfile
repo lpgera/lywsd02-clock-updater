@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm ci --no-audit --no-fund
 
-FROM node:24.4.1-alpine
+FROM node:24.4.1-slim
 
 WORKDIR /usr/src/app
 
