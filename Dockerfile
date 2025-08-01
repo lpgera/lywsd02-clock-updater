@@ -8,6 +8,8 @@ RUN npm ci --no-audit --no-fund
 
 FROM node:24.4.1-alpine
 
+WORKDIR /usr/src/app
+
 COPY --from=dependencies /usr/src/app ./
 
 COPY . .
