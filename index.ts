@@ -1,3 +1,4 @@
+import { setTimeout } from 'timers/promises'
 import noble from '@abandonware/noble'
 
 noble.on('stateChange', (state) => {
@@ -16,6 +17,7 @@ noble.on('discover', async (peripheral) => {
 
     console.log('Connecting...')
     await peripheral.connectAsync()
+    await setTimeout(100) // Wait for connection to stabilize
     const [service] = await peripheral.discoverServicesAsync(['ebe0ccb0-7a0a-4b0c-8a1a-6ff2997da3a6'])
     const [characteristic] = await service.discoverCharacteristicsAsync(['ebe0ccb7-7a0a-4b0c-8a1a-6ff2997da3a6'])
 
