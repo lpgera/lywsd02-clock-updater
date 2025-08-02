@@ -16,8 +16,10 @@ noble.on('discover', async (peripheral) => {
 
     console.log('Connecting...')
     await peripheral.connectAsync()
-    const [service] = await peripheral.discoverServicesAsync(['ebe0ccb0-7a0a-4b0c-8a1a-6ff2997da3a6'])
-    const [characteristic] = await service.discoverCharacteristicsAsync(['ebe0ccb7-7a0a-4b0c-8a1a-6ff2997da3a6'])
+    console.log('Discovering service...')
+    const [service] = await peripheral.discoverServicesAsync(['ebe0ccb07a0a4b0c8a1a6ff2997da3a6'])
+    console.log('Discovering characteristic...')
+    const [characteristic] = await service.discoverCharacteristicsAsync(['ebe0ccb77a0a4b0c8a1a6ff2997da3a6'])
 
     const arrayBuffer = new ArrayBuffer(5)
     const view = new DataView(arrayBuffer)
@@ -26,10 +28,10 @@ noble.on('discover', async (peripheral) => {
     view.setUint32(0, Math.floor(now.getTime() / 1000) + 30, true)
     // Set timezone offset in hours
     view.setInt8(4, -Math.floor(now.getTimezoneOffset() / 60))
-    console.log('Setting time:', now.toISOString())
+    console.log('Updating clock to:', now.toISOString())
 
     await characteristic.writeAsync(Buffer.from(arrayBuffer), false)
-    console.log('Successfully set time!')
+    console.log('Success!')
     process.exit(0)
   }
 })
