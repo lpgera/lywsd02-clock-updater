@@ -14,8 +14,9 @@ docker run -it --rm --network host --env TZ=UTC ghcr.io/lpgera/lywsd02-clock-upd
 
 ```yaml
 services:
-    lywsd02-clock-updater:
-        image: ghcr.io/lpgera/lywsd02-clock-updater
-        network_mode: host
-        environment:
-          - TZ = # Set your timezone, e.g. Europe/Berlin or America/New_York
+  lywsd02-clock-updater:
+    image: ghcr.io/lpgera/lywsd02-clock-updater
+    network_mode: host
+    environment:
+      - TZ=UTC # Set your timezone, e.g. Europe/Berlin or America/New_York
+```
