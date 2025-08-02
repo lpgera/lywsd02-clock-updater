@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm ci --no-audit --no-fund
+RUN npm ci --no-audit --no-fund --omit=dev
 
 FROM node:24.4.1-slim
 
