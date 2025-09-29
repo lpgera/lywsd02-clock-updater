@@ -1,4 +1,4 @@
-FROM node:24.8.0 AS dependencies
+FROM node:24.9.0 AS dependencies
 
 WORKDIR /usr/src/app
 
@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm ci --no-audit --no-fund --omit=dev
 
-FROM node:24.8.0-slim
+FROM node:24.9.0-slim
 
 WORKDIR /usr/src/app
 
