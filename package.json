@@ -12,7 +12,7 @@
     "@abandonware/noble": "^1.9.2-26"
   },
   "devDependencies": {
-    "@types/node": "^24.7.2"
+    "@types/node": "^24.8.1"
   },
   "volta": {
     "node": "24.10.0"
