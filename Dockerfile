@@ -14,4 +14,4 @@ COPY --from=dependencies /usr/src/app ./
 
 COPY . .
 
-CMD ["node", "--run", "start"]
+CMD ["node", "index.ts"]
