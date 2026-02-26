@@ -1,4 +1,4 @@
-import noble from '@abandonware/noble'
+import noble from '@stoprocent/noble'
 
 noble.on('stateChange', (state) => {
   if (state === 'poweredOn') {
@@ -35,3 +35,5 @@ noble.on('discover', async (peripheral) => {
     process.exit(0)
   }
 })
+
+await noble.waitForPoweredOnAsync()
