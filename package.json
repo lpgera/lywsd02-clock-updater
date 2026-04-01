@@ -9,7 +9,7 @@
   "author": "lpgera",
   "license": "MIT",
   "dependencies": {
-    "@stoprocent/noble": "^2.3.18"
+    "@stoprocent/noble": "^2.4.0"
   },
   "devDependencies": {
     "@types/node": "^25.5.0"
