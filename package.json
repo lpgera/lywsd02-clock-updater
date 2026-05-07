@@ -9,16 +9,12 @@
   "author": "lpgera",
   "license": "MIT",
   "dependencies": {
-    "@stoprocent/noble": "^2.4.1"
+    "@stoprocent/noble": "^2.5.2"
   },
   "devDependencies": {
     "@types/node": "^25.6.0"
   },
   "volta": {
-    "node": "25.9.0"
-  },
-  "engines": {
-    "node": "^25.0.0",
-    "npm": ">11.0.0"
+    "node": "26.1.0"
   }
 }
