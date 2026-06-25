@@ -12,7 +12,7 @@
     "@stoprocent/noble": "^2.5.5"
   },
   "devDependencies": {
-    "@types/node": "^26.0.0"
+    "@types/node": "^26.0.1"
   },
   "volta": {
     "node": "26.3.1"
