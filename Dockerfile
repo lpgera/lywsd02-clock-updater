@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm ci --no-audit --no-fund --omit=dev
 
-FROM node:26.5.1-slim
+FROM node:26.6.0-slim
 
 WORKDIR /usr/src/app
 
