@@ -15,7 +15,7 @@
     "@types/node": "^26.1.2"
   },
   "volta": {
-    "node": "26.5.1"
+    "node": "26.7.0"
   },
   "allowScripts": {
     "usb@2.17.0": true,
